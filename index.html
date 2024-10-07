@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme</title>
+
+<style>
+
+body{
+    height: 100vh;
+    background-color: blueviolet;
+    font-size: 62.5%;
+    display: grid;
+    place-items: center;
+}
+
+
+.universe{
+    height: 70vh;
+    aspect-ratio: 1;
+    background-color:yellowgreen ;
+display: flex;
+align-items: center;
+justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+ .sun {
+    content: "";
+    width: 20vw;
+    border-radius: 50%;
+
+    aspect-ratio: 1;
+    background-color: blueviolet;
+    
+ }
+
+.universe::before{
+    position: absolute;
+    top: 5.8rem;
+    left: 5.8rem;
+    content: "";
+    width: 18vw;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: white;
+    
+   
+    animation: moon 3s linear 0s infinite  ;
+   
+}
+
+@keyframes moon {
+    0%{
+        left: 22rem;
+    }
+    50%{
+        left: -22rem;
+    }
+    100%{
+        left: 22rem;
+    }
+}
+
+
+</style>
+
+
+</head>
+<body>
+   
+<div class="universe">  
+    <div class="sun"></div>
+</div>
+
+</body>
+</html>
